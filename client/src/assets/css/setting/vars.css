@@ -1,0 +1,24 @@
+:root {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-size: 16px;
+
+    /* font */
+    --title-font: 'PartizenoRegular';
+    --point-font: 'PPPangaia-Medium';
+    --en-font: 'Roboto Condensed';
+    --ko-font: 'Chosunilbo_myungjo';
+
+    /* color */
+    --font-color: #f9f9f9;
+    --n-font-color: #aaa;
+    --gray-color: #5d5d5d;
+    --bg-color: #1C1C1C;
+    --point-color: #1c46b2;
+}
+
+@media screen and (max-width: 1280px) {
+    :root {
+        font-size: 14px;
+    }
+}

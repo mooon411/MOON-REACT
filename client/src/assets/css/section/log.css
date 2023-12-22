@@ -1,0 +1,66 @@
+#log {
+    padding-bottom: 10rem;
+    background-color: var(--bg-color);
+}
+.log_text {
+    width: 100%;
+    text-align: right;
+    font-family: var(--ko-font);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-bottom: 7rem;
+}
+
+/* log_moment */
+    .log_moment ul {
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .log_moment ul:first-child {
+        grid-template-columns: repeat(1, 3fr 2fr);
+    }
+    .log_moment ul:nth-child(2) {
+        grid-template-columns: 4fr 3fr 3fr;
+    }
+    .log_moment ul li .log_img {
+        width: 100%;
+        border-radius: 10px; 
+        overflow: hidden;
+        position: relative;
+        height: 0;
+        padding-bottom: 55%;
+    }
+    .log_moment ul li .log_img img {
+        position: relative;
+        left: -10%;
+        width: 120%;
+    }
+    .log_moment ul li p {
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        text-transform: uppercase;
+    }
+
+@media screen and (max-width: 790px) {
+    .log_text {
+        margin-bottom: 7rem;
+        word-break: keep-all;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    .log_text br {
+        display: none;
+    }
+
+    /* log_moment */
+    .log_moment ul:nth-child(1){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .log_moment ul:nth-child(2) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

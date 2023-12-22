@@ -1,0 +1,111 @@
+/* 가로스크롤 숨기기 */
+html, body {
+    overflow-x: hidden;
+}
+
+/* 섹션 기본 설정 */
+section {
+    position: relative;
+    height: auto;
+}
+
+/* 컨테이너 사이즈 */
+.container {
+    padding: 0 5.2%;
+}
+
+/* 섹션 타이틀 */
+.section_title {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: .7rem 0;
+    border-top: 1px solid var(--font-color);
+}
+.section_title h3 {
+    font-size: 0.7rem;
+    font-family: var(--en-font);
+    text-transform: uppercase;
+}
+
+/* 버튼 스타일 */
+.btn_style {
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.btn_style::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+    background-color: var(--font-color);
+}
+.btn_style::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 10;
+    background-color: var(--gray-color);
+    transition: left 1s ease;
+}
+.btn_style:hover::after {
+  left: 100%;
+}
+
+.btn_style a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-family: var(--en-font);
+    font-weight: 100;
+    color: var(--n-font-color);
+    transition: color 1s ease;
+}
+.btn_style:hover a {
+    color: var(--font-color);
+}
+.btn_style a .info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* 블라인드 */
+.blind {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    /* 버튼 스타일 */
+    .btn_style {
+        width: 300px;
+    }
+
+    .btn_style a .info img {
+        margin-right: 0.5rem;
+    }
+}
+@media screen and (max-width: 790px) {
+    .about_btn, .contact_btn {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn_style {
+        width: 100%;
+        max-width: 100%;
+    }
+    .btn_style a {
+        padding: 1.3rem 1rem;
+    }
+}
