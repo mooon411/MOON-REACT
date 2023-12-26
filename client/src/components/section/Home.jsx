@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ThreeJsComponent from "../../assets/js/city";
 
 const Home = () => {
   return (
@@ -22,7 +23,9 @@ const Home = () => {
             <FontAwesomeIcon icon={faArrowRight} />
           </a>
         </div>
-        <div id="threeJs"></div>
+        <div id="threeJs">
+          <ThreeJsComponent />
+        </div>
       </section>
     </>
   );

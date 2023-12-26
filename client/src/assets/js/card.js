@@ -1,8 +1,19 @@
 import React, { useRef } from "react";
 
+import card01Img from "../img/card01.jpg";
+import card02Img from "../img/card02.jpg";
+import card03Img from "../img/card03.jpg";
+import card04Img from "../img/card04.jpg";
+import card05Img from "../img/card05.jpg";
+import card06Img from "../img/card06.jpg";
+import card07Img from "../img/card07.jpg";
+import card08Img from "../img/card08.jpg";
+import card09Img from "../img/card09.jpg";
+import card10Img from "../img/card10.jpg";
+import card11Img from "../img/card11.jpg";
+
 function PictureDraggable() {
   const picturesRef = useRef([]);
-
   const previousTouch = useRef(undefined);
 
   function updateElementPosition(event, index) {
@@ -54,9 +65,56 @@ function PictureDraggable() {
     startDrag(event, index);
   };
 
+  const cardItems = [
+    {
+      src: card11Img,
+      note: "MOON",
+    },
+    {
+      src: card10Img,
+      note: "The Wind Blows",
+    },
+    {
+      src: card09Img,
+      note: "I like picnics",
+    },
+    {
+      src: card08Img,
+      note: "sea ​​breeze",
+    },
+    {
+      src: card07Img,
+      note: "popular places",
+    },
+    {
+      src: card06Img,
+      note: "flower viewing",
+    },
+    {
+      src: card05Img,
+      note: "walk on the sea road",
+    },
+    {
+      src: card04Img,
+      note: "soft sandy beach",
+    },
+    {
+      src: card03Img,
+      note: "see the forest",
+    },
+    {
+      src: card02Img,
+      note: "go to work",
+    },
+    {
+      src: card01Img,
+      note: "my daily life",
+    },
+  ];
+
   return (
     <div>
-      {[...Array(5)].map((_, index) => {
+      {[...Array(11)].map((_, index) => {
         const range = 100;
         const randomX = Math.random() * (range * 2) - range;
         const randomY = Math.random() * (range * 2) - range;
@@ -77,7 +135,14 @@ function PictureDraggable() {
             onMouseDown={(event) => startDrag(event, index)}
             onTouchStart={(event) => handleTouchStart(event, index)}
           >
-            Picture {index + 1}
+            <img
+              className="Picture-img"
+              src={cardItems[index].src}
+              alt="card"
+            />
+            <div className="Picture-note">
+              <span>{cardItems[index].note}</span>
+            </div>
           </div>
         );
       })}

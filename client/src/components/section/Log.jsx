@@ -1,11 +1,9 @@
 import React from "react";
-const imagePaths = {
-  log01Img: "../../assets/img/log01.jpg",
-  log02Img: "../../../assets/img/log02.jpg",
-  log03Img: "/assets/img/log03.jpg",
-  log04Img: "./assets/img/log04.jpg",
-  log05Img: "../assets/img/log05.jpg",
-};
+import log01Img from "../../assets/img/log01.jpg";
+import log02Img from "../../assets/img/log02.jpg";
+import log03Img from "../../assets/img/log03.jpg";
+import log04Img from "../../assets/img/log04.jpg";
+import log05Img from "../../assets/img/log05.jpg";
 
 const Log = () => {
   return (
@@ -29,13 +27,13 @@ const Log = () => {
           <ul className="line_one">
             <li>
               <div className="log_img">
-                <img src={imagePaths.log01Img} alt="log_moment" />
+                <img src={log01Img} alt="log_moment" />
               </div>
               <p>steady development</p>
             </li>
             <li>
               <div className="log_img">
-                <img src={imagePaths.log02Img} alt="log_moment" />
+                <img src={log02Img} alt="log_moment" />
               </div>
               <p>effort and passion</p>
             </li>
@@ -43,19 +41,19 @@ const Log = () => {
           <ul className="line_two">
             <li>
               <div className="log_img">
-                <img src={imagePaths.log03Img} alt="log_moment" />
+                <img src={log03Img} alt="log_moment" />
               </div>
               <p>rest breathing</p>
             </li>
             <li>
               <div className="log_img">
-                <img src={imagePaths.log04Img} alt="log_moment" />
+                <img src={log04Img} alt="log_moment" />
               </div>
               <p>healthy food</p>
             </li>
             <li>
               <div className="log_img">
-                <img src={imagePaths.log05Img} alt="log_moment" />
+                <img src={log05Img} alt="log_moment" />
               </div>
               <p>health</p>
             </li>
