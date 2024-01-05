@@ -3,14 +3,24 @@
     width: 100%;
     height: 100vh;
     cursor: crosshair;
-
+}
+#home > div {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    /* 마우스 */
+    /* pointer-events: none; */
+}
+iframe {
+    width: 100vw;
+    height: 100vh;
 }
 #home #threeJs {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100vw !important;
+    height: 100vh !important;
     position: fixed;
-    z-index: -1;
     top: 0;
     left: 0;
 }
@@ -55,6 +65,7 @@
     display: block;
     text-align: right;
     padding: 5px;
+    /* pointer-events: visible; */
 }
 
 @media screen and (max-width: 1280px) {

@@ -4,6 +4,7 @@
     background: linear-gradient(to bottom, transparent, var(--bg-color));
     position: relative;
     padding-top: 2.5rem;
+    /* pointer-events: none; */
 }
 .about_text {
     font-family: var(--ko-font);
@@ -52,6 +53,7 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    /* pointer-events: visible; */
 }
 
 .about_btn .btn_style:nth-child(1) {

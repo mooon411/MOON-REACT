@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./assets/css/style.css";
 import "./assets/js/card";
-// import "./assets/js/city";
-// import "./assets/js/gsapWrap";
 
 import App from "./App";
 

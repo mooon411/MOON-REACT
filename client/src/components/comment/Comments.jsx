@@ -19,7 +19,7 @@ const Comments = () => {
               <img src={comment01Img} alt="daily1" />
             </div>
             <div className="comment_write">
-              <label for="write" className="blind">
+              <label htmlFor="write" className="blind">
                 COMMENT01
               </label>
               <input id="write" type="text" placeholder="COMMENT" />
@@ -41,7 +41,7 @@ const Comments = () => {
               <img src={comment02Img} alt="daily2" />
             </div>
             <div className="comment_write">
-              <label for="write" className="blind">
+              <label htmlFor="write" className="blind">
                 COMMENT02
               </label>
               <input id="write" type="text" placeholder="COMMENT" />
@@ -62,7 +62,7 @@ const Comments = () => {
               <img src={comment03Img} alt="daily3" />
             </div>
             <div className="comment_write">
-              <label for="write" className="blind">
+              <label htmlFor="write" className="blind">
                 COMMENT03
               </label>
               <input id="write" type="text" placeholder="COMMENT" />

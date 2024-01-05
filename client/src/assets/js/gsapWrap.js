@@ -62,9 +62,6 @@ const gsapWrap = () => {
       );
     };
 
-    // SmoothScrollComponent 로직
-    // ... (Lenis나 다른 스크롤 라이브러리 초기화 및 이벤트 핸들링)
-
     // LinkSmoothScrollEffect 로직
     let links = document.querySelectorAll("a[href^='#']");
     links.forEach((link) => {

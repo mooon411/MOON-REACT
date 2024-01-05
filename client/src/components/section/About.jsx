@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import icon1img from "../../assets/img/icon1.jpg";
 import gitHub from "../../assets/img/github.png";
 import instaImg from "../../assets/img/insta.png";

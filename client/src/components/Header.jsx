@@ -35,7 +35,7 @@ const Header = () => {
         </nav>
         <div className="nav_btn">
           <input type="checkbox" id="menu" />
-          <label for="menu">
+          <label htmlFor="menu">
             <span></span>
             <span></span>
             <span></span>
