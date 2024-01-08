@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+const initScrollHeader = () => {
   let didScroll = false;
   let lastScrollTop = 0;
   const delta = 5;
@@ -6,18 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarHeight = header.offsetHeight;
   const menuCheckbox = document.getElementById("menu");
 
-  window.addEventListener("scroll", function () {
+  const onScroll = () => {
     didScroll = true;
-  });
+  };
 
-  setInterval(function () {
+  window.addEventListener("scroll", onScroll);
+
+  const scrollInterval = setInterval(() => {
     if (didScroll) {
       hasScrolled();
       didScroll = false;
     }
   }, 250);
 
-  function hasScrolled() {
+  const hasScrolled = () => {
     const st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -35,5 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     lastScrollTop = st;
-  }
-});
+  };
+
+  const cleanup = () => {
+    window.removeEventListener("scroll", onScroll);
+    clearInterval(scrollInterval);
+  };
+
+  return cleanup;
+};
+
+export function ScrollHeader() {
+  const cleanup = initScrollHeader();
+  return cleanup;
+}

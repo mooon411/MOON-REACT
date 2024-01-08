@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import moonImage from "../assets/img/moon.svg";
 
 const Header = () => {
@@ -7,29 +6,29 @@ const Header = () => {
     <>
       <header id="myHeader">
         <div id="logo">
-          <Link to="#home">
+          <a href="#home">
             <img src={moonImage} alt="moon" />
-          </Link>
+          </a>
         </div>
         <nav>
           <ul>
             <li>
-              <Link to="#about">about</Link>
+              <a href="#about">about</a>
             </li>
             <li>
-              <Link to="#port">port</Link>
+              <a href="#port">port</a>
             </li>
             <li>
-              <Link to="#log">log</Link>
+              <a href="#log">log</a>
             </li>
             <li>
-              <Link to="#info">info</Link>
+              <a href="#info">info</a>
             </li>
             <li>
-              <Link to="#talk">Talk</Link>
+              <a href="#talk">Talk</a>
             </li>
             <li>
-              <Link to="#contact">contact</Link>
+              <a href="#contact">contact</a>
             </li>
           </ul>
         </nav>
@@ -42,22 +41,22 @@ const Header = () => {
             <div className="m_nav">
               <ul>
                 <li>
-                  <Link to="#about">about</Link>
+                  <a href="#about">about</a>
                 </li>
                 <li>
-                  <Link to="#port">port</Link>
+                  <a href="#port">port</a>
                 </li>
                 <li>
-                  <Link to="#log">log</Link>
+                  <a href="#log">log</a>
                 </li>
                 <li>
-                  <Link to="#info">info</Link>
+                  <a href="#info">info</a>
                 </li>
                 <li>
-                  <Link to="#talk">Talk</Link>
+                  <a href="#talk">Talk</a>
                 </li>
                 <li>
-                  <Link to="#contact">contact</Link>
+                  <a href="#contact">contact</a>
                 </li>
               </ul>
             </div>
